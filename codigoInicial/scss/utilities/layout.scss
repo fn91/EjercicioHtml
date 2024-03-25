@@ -1,0 +1,60 @@
+
+@import url(layout.css);
+
+@mixin my-layout($table :black,$tr:50% ,$td:60%){
+
+color: $table;
+width:$tr;
+height:$td;
+
+
+
+};
+
+
+.Layout{
+    
+   @include my-layout(black,375px ,768px ) 
+   
+
+
+}
+
+.Layout {
+   
+    @if $--breakpoint-sm == 375px {
+    --breakpoint-sm: $--breakpoint-sm;
+  } else {
+    --breakpoint-md: 768px;
+    --breakpoint-md: $--breakpoint-md;
+
+  }else{
+    --breakpoint-xl:1280px;
+    --breakpoint-xl: $--breakpoint-xl;
+
+  }
+}
+
+
+
+
+
+
+
+
+$breakpoints: (
+
+    "sm": 375px,
+    "md": 768px,
+    "xl": 1280px,
+    
+
+);
+
+
+
+
+
+
+
+
